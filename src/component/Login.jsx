@@ -5,7 +5,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
 function Login() {
-   const [inputData, setInputData] = useState({ email: '', password: '',id:1 }); 
+   const [inputData, setInputData] = useState({ email:'', password: '',id:1 }); 
    const [data, setData] = useState([]);
    const [error, setError] = useState("");
    const navigate = useNavigate(); 
@@ -29,11 +29,12 @@ function Login() {
 
    function handleSubmit(event) {
       event.preventDefault();
-      console.log(inputData)
+      console.log(inputData,"inputdata")
      
-  const output=data.find(state=>state.email===inputData.email && state.password==inputData.password)
+//   let output=data.find(state=>state.email===inputData.email && state.password==inputData.password)
+  let output="user@gmail.com"==inputData.email && "12345"==inputData.password  
  
-  console.log(output)
+  console.log(output,"outputdata")
 
       
      
